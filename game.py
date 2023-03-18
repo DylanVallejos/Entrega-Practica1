@@ -62,5 +62,8 @@ for i in range(0, times):
 end_time = datetime.now()
 # Restando las fechas obtenemos el tiempo transcurrido.
 total_time = end_time - init_time
+#Imprimo la cantidad de correctos y incorrectos
+print("La cantidad de correctos fueron: ",correcto)
+print("La cantidad de incorrectos fueron: ",incorrecto)
 # Mostramos ese tiempo en segundos.
 print(f"\n Tardaste {total_time.seconds} segundos.")
