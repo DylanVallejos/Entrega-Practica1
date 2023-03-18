@@ -9,6 +9,9 @@ times = 5
 # Esto toma la fecha y hora actual.
 init_time = datetime.now()
 print(f"¡Veremos cuanto tardas en responder estas {times} operaciones!")
+#Inicializo nuevas variables para contar los correctos e incorrectos
+correcto=0
+incorrecto=0
 for i in range(0, times):
 # Se eligen números y operador al azar
     number_1 = randrange(10)
@@ -18,6 +21,7 @@ for i in range(0, times):
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
 # Le pedimos al usuario el resultado
 #2da MODIFICACION COMPARAR RESULTADOS E IMPRIMIR SI ES CORRECTO O INCORRECTO
+#3ra MODIFICACION AGREGO CONTADOR PARA SABER LA CANTIDAD DE VECES QUE ACERTE Y LA CANTIDAD DE VECES QUE NO
     result = input("resultado: ")
     result=int(result)
     match operator:
@@ -25,26 +29,34 @@ for i in range(0, times):
             cuenta=number_1+number_2
             if(cuenta==result):
                 print("Correcto")
+                correcto+=1
             else:
                 print("Incorrecto")
+                incorrecto+=1
         case "-":
             cuenta=number_1-number_2
             if(cuenta==result):
                 print("Correcto")
+                correcto+=1
             else:
                 print("Incorrecto")
+                incorrecto+=1
         case "*":
             cuenta=number_1*number_2
             if(cuenta==result):
                 print("Correcto")
+                correcto+=1
             else:
                 print("Incorrecto")
+                incorrecto+=1
         case "/":
             cuenta=number_1/number_2
             if(cuenta==result):
                 print("Correcto")
+                correcto+=1
             else:
                 print("Incorrecto")
+                incorrecto+=1
 # Al terminar toda la cantidad de cuentas por resolver.
 # Se vuelve a tomar la fecha y la hora.
 end_time = datetime.now()
