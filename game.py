@@ -17,7 +17,34 @@ for i in range(0, times):
 # Se imprime la cuenta.
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
 # Le pedimos al usuario el resultado
+#2da MODIFICACION COMPARAR RESULTADOS E IMPRIMIR SI ES CORRECTO O INCORRECTO
     result = input("resultado: ")
+    result=int(result)
+    match operator:
+        case "+":
+            cuenta=number_1+number_2
+            if(cuenta==result):
+                print("Correcto")
+            else:
+                print("Incorrecto")
+        case "-":
+            cuenta=number_1-number_2
+            if(cuenta==result):
+                print("Correcto")
+            else:
+                print("Incorrecto")
+        case "*":
+            cuenta=number_1*number_2
+            if(cuenta==result):
+                print("Correcto")
+            else:
+                print("Incorrecto")
+        case "/":
+            cuenta=number_1/number_2
+            if(cuenta==result):
+                print("Correcto")
+            else:
+                print("Incorrecto")
 # Al terminar toda la cantidad de cuentas por resolver.
 # Se vuelve a tomar la fecha y la hora.
 end_time = datetime.now()
