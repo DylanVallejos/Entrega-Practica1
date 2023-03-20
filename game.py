@@ -49,14 +49,17 @@ for i in range(0, times):
             else:
                 print("Incorrecto")
                 incorrecto+=1
-        case "/":
-            cuenta=number_1/number_2
-            if(cuenta==result):
-                print("Correcto")
-                correcto+=1
+        case "/":            
+            if (number_2!=0):
+                cuenta=number_1/number_2
+                if(cuenta==result):
+                    print("Correcto")
+                    correcto+=1
+                else:
+                    print("Incorrecto")
+                    incorrecto+=1
             else:
-                print("Incorrecto")
-                incorrecto+=1
+                print("No se puede divir entre 0")        
 # Al terminar toda la cantidad de cuentas por resolver.
 # Se vuelve a tomar la fecha y la hora.
 end_time = datetime.now()
